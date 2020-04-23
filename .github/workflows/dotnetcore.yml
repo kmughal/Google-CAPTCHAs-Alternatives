@@ -1,0 +1,32 @@
+name: Build & Test MVC Filters
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Build Honeypot
+      run: dotnet build CSharp/MVC-CAPTCHAs-Alternatives-Filters/Honeypot/src/Filter/Honeypot.Filter.csproj  --configuration Release --no-restore
+    - name: Test Honeypot
+      run: $ dotnet test CSharp/MVC-CAPTCHAs-Alternatives-Filters/Honeypot/src/Test/
+Test.csproj --no-restore --verbosity normal
+
+    - name: Build Random Question Filter
+      run: dotnet build CSharp/MVC-CAPTCHAs-Alternatives-Filters/RandomQuestion/src/Filter/RandomQuestion.Filter.csproj   --configuration Release --no-restore
+    - name: Test Random Question Filter
+      run: $ dotnet test CSharp/MVC-CAPTCHAs-Alternatives-Filters/RandomQuestion/src/Test/Tests.cspro --no-restore --verbosity normal
+    
+    - name: Build Request Throttle
+      run: dotnet build CSharp/MVC-CAPTCHAs-Alternatives-Filters/RequestThrottle/src/Filter/RequestThrottle.Filter.csproj
