@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<section>
+ <div class="alert" asp-validation-summary="All">
+
+ </div>
+
+ 
+    <h1 class="display-4">Request Limit Example</h1>
+    <form 
+    role="form"
+    asp-action="IndexPost" 
+    asp-controller="Home" 
+    method="post" 
+    asp-route-returnurl="/">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</section>
+
+
+<style>
+  .alert ul {
+    list-style-type: none;
+  }
+  
+  .alert ul li {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    font-size: 18px;
+    padding: 20px 20px;
+    width: 90%;
+    border-radius : 10px;
+  }
+</style>
+ 

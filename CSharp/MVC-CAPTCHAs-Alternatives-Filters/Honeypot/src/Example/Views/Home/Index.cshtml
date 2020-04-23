@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    var list = new List<Honeypot.Filter.TagHelpers.HoneypotSelectTagHelper.SelectItem> {
+            new Honeypot.Filter.TagHelpers.HoneypotSelectTagHelper.SelectItem { Text = "Married" , Value ="Married" },
+            new Honeypot.Filter.TagHelpers.HoneypotSelectTagHelper.SelectItem { Text = "Un-Married" , Value ="UnMarried" }
+        };
+}
+
+<div class="alert" asp-validation-summary="All">
+
+ </div>
+ <style>
+      .alert ul {
+    list-style-type: none;
+  }
+  
+  .alert ul li {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    font-size: 18px;
+    padding: 20px 20px;
+    width: 90%;
+    border-radius : 10px;
+  }
+ </style>
+<form
+    role="form"
+    asp-action="IndexPost" 
+    asp-controller="Home" 
+    method="post"
+    asp-route-returnurl="/">
+<div class="container">
+	<div class="row">
+		 <form class="form-horizontal">
+            <fieldset>
+                <honeypot-textbox name="name" label="Full Name" placeholder="Enter full name"></honeypot-textbox>
+                <honeypot-textbox name="age" label="Age" placeholder="Enter age"></honeypot-textbox>
+
+                <honeypot-select name="MarriedStatus" label="Married Status" name="MaterialStatus" list="@list"></honeypot-select>
+
+                <honeypot-radiobox name="employeed" label="Employeed" value="Employeed"></honeypot-radiobox>
+                <honeypot-radiobox name="employeed" label="Not Employeed" value="Not Employeed"></honeypot-radiobox>
+
+                <honeypot-checkbox name="CanDrive" label="Do you drive ?" value="true"></honeypot-checkbox>
+
+                <honeypot-textbox name="Address.Street" label="Street" placeholder="Enter Street"></honeypot-textbox>
+                <honeypot-textbox name="Address.Postcode" label="postcode" placeholder="Enter Postcode"></honeypot-textbox>
+                <honeypot-textbox name="Address.Country" label="country" placeholder="Enter Country"></honeypot-textbox>
+
+                <div class="control-group">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+	</div>
+</div>
+
+</form>

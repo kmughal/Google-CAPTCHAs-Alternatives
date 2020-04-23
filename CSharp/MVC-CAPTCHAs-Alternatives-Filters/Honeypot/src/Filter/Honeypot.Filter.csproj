@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+     <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.0-preview.2.20160.6" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Title>Honeypot Filter</Title>
+    <PackageId>HoneypotFilter</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Khurram Mughal</Authors>
+    <Company>kmughal solutions ltd</Company>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryURL>https://github.com/kmughal/MVC-CAPTCHAs-Alternatives-Filters/tree/master/Honeypot/src</RepositoryURL>
+    <Description>This is an alternative approach to google recaptcha.</Description>
+    <Summary>
+      This page on my github account contains instructions how to use this 
+      https://github.com/kmughal/MVC-CAPTCHAs-Alternatives-Filters/blob/master/Honeypot/src/Readme.md
+    </Summary>
+  </PropertyGroup>
+
+</Project>

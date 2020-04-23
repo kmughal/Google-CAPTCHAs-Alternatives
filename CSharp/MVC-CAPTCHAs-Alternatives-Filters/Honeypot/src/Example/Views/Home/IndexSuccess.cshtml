@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Index Success";
+}
+@model Person;
+
+<h1>@ViewData["Title"]</h1>
+
+
+<section>
+    <h1>@Model.Name</h1>
+    <p>Age : @Model.Age</p>
+    <p>Employeed : @(Model.Employeed)</p>
+    <p>Can Drive : @Model.CanDrive.ToString()</p>
+    <p>Married : @(Model.MarriedStatus.ToString())</p>
+    <address>
+        @Model.Address.Street <br/>
+        @Model.Address.Postcode <br/>
+        @Model.Address.Country <br/>
+    </address>
+</section>

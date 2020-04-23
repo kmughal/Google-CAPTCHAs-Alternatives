@@ -1,0 +1,6 @@
+CSHarp/**/bin
+CSHarp/**/obj
+*.log
+node_modules
+dist
+.cache

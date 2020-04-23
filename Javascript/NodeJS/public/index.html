@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="http://localhost:1000/submit" method="POST">
+        <div id="field1"></div>
+        <div id="field2"></div>
+        <div id="field3"></div>
+        <input type="submit" />
+    </form>
+
+    <script>
+        function addField(name, label, placeholder, value, type,id) {
+            value = value || ""
+            
+            const url = `http://localhost:1000/honeypot/${type}?name=${name}&label=${label}&placeholder=${placeholder}&value=${value}`
+            fetch(url)
+            .then(r => r.text())
+            .then(text => document.getElementById(id).innerHTML = text)
+        }
+        addField("name","Name:","Please provide full name" ,"", "text","field1")
+        addField("email","Email Address:","Please provide email" ,"", "text","field2")
+        addField("married","Married:","" , "checkbox","field3")
+    </script>
+</body>
+
+</html>

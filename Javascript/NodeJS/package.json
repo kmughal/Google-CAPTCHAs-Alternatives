@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-honeypot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@bikeshaving/crank": "0.1.0",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "parcel-bundler": "^1.6.1"
+  },
+  "scripts": {
+    "start": "nodemon .",
+    "client:start": "parcel example.html --open",
+    "client:build": "parcel build example.html"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.9.4"
+  }
+}

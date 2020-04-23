@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.2.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.0-preview.2.20160.6" />
+  </ItemGroup>
+
+
+  <PropertyGroup>
+    <Title>Random Question Filter</Title>
+    <PackageId>RandomQuestionFilter</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Khurram Mughal</Authors>
+    <Company>kmughal solutions ltd</Company>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryURL>https://github.com/kmughal/MVC-CAPTCHAs-Alternatives-Filters/tree/master/RandomQuestion/src/RandomQuestion.Filters</RepositoryURL>
+    <Description>This is an alternative approach to google recaptcha.</Description>
+    <Summary>
+      In order to use this you have to do two things:
+      1. Apply RandomQuestion as an attribute on an action.
+      2. Add <random-question></random-question> markup inside form.
+      3. In order to use the TagHelper you have to go to _ViewImports.cshtml and add @addTagHelper *,RandomQuestion.Filters
+    </Summary>
+  </PropertyGroup>
+
+</Project>
